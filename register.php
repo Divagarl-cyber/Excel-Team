@@ -40,10 +40,10 @@
         
             <form action="register.php" method="POST" id="form">
             <?php include('errors.php'); ?>
-              <input type="text" name="username" placeholder="User ID" required>
+              <input type="text" name="username" placeholder="User ID" pattern="[A-Za-z0-9_] {1, 15} only" required>
               <input type="email" name="email" placeholder="Email Address" required>
-              <input type="password" name="password_1" placeholder="********">
-              <input type="password" name="password_2" placeholder="confirm password">
+              <input type="password" name="password_1" placeholder="********" pattern="[A-Za-z0-9] {1, 15} only" required>
+              <input type="password" name="password_2" placeholder="confirm password" pattern="[A-Za-z0-9] {1, 15} only" required>
               <input type="submit" value="REGISTER" name="reg_user">
       
             </form>
