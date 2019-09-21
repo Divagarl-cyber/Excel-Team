@@ -40,8 +40,8 @@
           <p>Not a Registered? <a href="register.php" id="signup-link">sign up</a> now </p>
           <form action="login.php" method="POST" id="form">
           <?php include('errors.php'); ?>
-            <input type="text" name="username" placeholder="User ID" required>
-            <input type="password" name="password" placeholder="********">
+            <input type="text" name="username" placeholder="User ID" pattern="[A-Za-z0-9_] {1, 15} only" required>
+            <input type="password" name="password" placeholder="********" pattern="[A-Za-z0-9] {1, 15} only" required>
             <input type="submit" value="LOGIN" name="login_user">
     
           </form>
